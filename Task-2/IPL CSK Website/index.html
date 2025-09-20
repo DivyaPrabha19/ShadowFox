@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chennai Super Kings</title>
+    <link rel="icon" href="csk.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    
+                    <span>Chennai Super Kings</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#squad" class="nav-link">Squad</a></li>
+                    <li><a href="#history" class="nav-link">History</a></li>
+                    <li><a href="#stats" class="nav-link">Statistics</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Chennai Super Kings</h1>
+                    <p class="hero-subtitle">Whistle Podu!</p>
+                    <p class="hero-description">Five-time IPL Champions. The most successful franchise in Indian Premier League history.</p>
+                    <div class="hero-stats">
+                        <div class="stat-box">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">IPL Titles</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Playoff Appearances</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">10</span>
+                            <span class="stat-label">Finals</span>
+                        </div>
+                    </div>
+                    <div class="ticket-info">
+                        <h3>🎫 IPL 2025 Tickets</h3>
+                        <p>Ticket sales open: <strong>January 15, 2025</strong></p>
+                        <p>Home matches at MA Chidambaram Stadium, Chennai</p>
+                        <button class="ticket-btn" onclick="window.open('https://www.iplt20.com/tickets', '_blank')">Book Tickets</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- ADD HERO TEAM IMAGE HERE -->
+                    <img src="csk.jpg" alt="CSK Logo" class="logo-img">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="squad" class="squad-section">
+            <div class="container">
+                <h2 class="section-title">Current Squad 2025</h2>
+                <div class="squad-tabs">
+                    <button class="tab-btn active" data-tab="current">Current Players</button>
+                    <button class="tab-btn" data-tab="legends">Legends</button>
+                </div>
+                <div class="players-grid" id="playersGrid"></div>
+            </div>
+        </section>
+
+        <section id="history" class="history-section">
+            <div class="container">
+                <h2 class="section-title">Championship History</h2>
+                <div class="timeline" id="timeline"></div>
+            </div>
+        </section>
+
+        <section id="stats" class="stats-section">
+            <div class="container">
+                <h2 class="section-title">Team Statistics</h2>
+                <div class="stats-grid" id="statsGrid"></div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <div class="player-modal" id="playerModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <div class="ticket-modal" id="ticketModal">
+        <div class="modal-overlay" id="ticketOverlay"></div>
+        <div class="modal-content">
+            <button class="close-btn" id="closeTicketModal">&times;</button>
+            <div class="ticket-modal-body">
+                <h2 style="color: #FFD700; text-align: center; margin-bottom: 2rem;">🎫 CSK Home Matches - IPL 2025</h2>
+                <div class="matches-grid" id="matchesGrid"></div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="official-booking-btn" id="officialBookingBtn">Book on Official IPL Website</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
